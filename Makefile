@@ -13,5 +13,8 @@ solve.dbg: $(SRC)
 solve.opt: $(SRC)
 	$(CXX) $(CXXFLAGS) $(OPT_FLAGS) -o $@ $(SRCS)
 
+test: $(BINS)
+	./run-tests.sh $(BINS)
+
 clean:
 	rm -f $(BINS)
